@@ -1,7 +1,7 @@
 body{
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f6d8fa;
+    background-color:whitesmoke;
     margin: 0;
     padding: 20px;
 }
@@ -11,7 +11,7 @@ h1{
     margin: 20px 0;
 }
 
-h2{
+#score_title{
     font-size: 2rem;
     margin-top: 20px;
     color: rgb(8, 26, 159);
@@ -32,21 +32,39 @@ button{
     padding: 10px 20px;
     margin: 10px;
     cursor: pointer;
-    border: none;
+    border: blue 1px solid;
     border-radius: 5px;
-    background-color: rgb(238, 217, 246);
+    
     box-shadow: black 2px 1px 6px;
 }
 button:hover{
     background-color: #efceec;
     padding: 12px 22px;
-    box-shadow: black 4px 2px 8px;
+    box-shadow: rgb(194, 193, 193) 2px 1px 4px 1px;
 }
 div#robot-choice{
     padding: 0px auto;
     margin: 0px auto;
-    background-color: rosybrown;
     font-size: 1.5rem;
-    width: 5rem;
-    height: 5rem;
+    width:10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: blue 1px solid;
+    border-radius: 10px;
+    box-shadow: rgb(194, 193, 193) 2px 1px 4px 1px;
+}
+#choice{
+    font-size: larger;
+    margin: 0 auto;
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Results{
+    text-align: center;
+    color: rgb(168, 68, 68);
 }
