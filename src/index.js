@@ -42,9 +42,15 @@ function play(playerChoice) {
   ResutlElement.textContent += ` ${winner === "player" ? "You win!" : winner === "robot" ? "Robot wins!" : "It's a tie!"}`;
   if (playerScore === 3) {
     ResutlElement.textContent = "Game Over! You win! Refresh to play again.";
+      playerScore =0;
+      robotScore =0;
+      element.textContent = `${playerScore} - ${robotScore}`;
     return;
   } else if (robotScore === 3) {
     ResutlElement.textContent = "Game Over! Robot wins! Refresh to play again.";
+    playerScore = 0;
+    robotScore = 0;
+    element.textContent = `${playerScore} - ${robotScore}`;
     return;
   }
 }
