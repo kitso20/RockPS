@@ -68,3 +68,7 @@ div#robot-choice{
     text-align: center;
     color: rgb(168, 68, 68);
 }
+span{
+    color: rgb(8, 26, 159);
+    font-weight: bold;
+}

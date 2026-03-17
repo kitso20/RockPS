@@ -30,7 +30,7 @@ function updateScore(winner) {
   element.textContent = `${playerScore} - ${robotScore}`;
 }
 function play(playerChoice) {
-    ResutlElement.textContent = "";
+  ResutlElement.textContent = "";
   const robotChoice = getRobotChoice();
   let emoji = "";
   if (robotChoice === "rock") emoji = "✊🏿";
@@ -40,6 +40,13 @@ function play(playerChoice) {
   const winner = determineWinner(playerChoice, robotChoice);
   updateScore(winner);
   ResutlElement.textContent += ` ${winner === "player" ? "You win!" : winner === "robot" ? "Robot wins!" : "It's a tie!"}`;
+  if (playerScore === 3) {
+    ResutlElement.textContent = "Game Over! You win! Refresh to play again.";
+    return;
+  } else if (robotScore === 3) {
+    ResutlElement.textContent = "Game Over! Robot wins! Refresh to play again.";
+    return;
+  }
 }
 document.getElementById("rock").addEventListener("click", () => play("rock"));
 document.getElementById("paper").addEventListener("click", () => play("paper"));
